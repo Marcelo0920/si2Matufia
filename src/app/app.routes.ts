@@ -27,11 +27,11 @@ export const routes: Routes = [
           ),
       },
       {
-        path: 'products',
+        path: 'formulario-sesion',
         loadComponent: () =>
-          import('./components/product-list/product-list.component').then(
-            (m) => m.ProductListComponent
-          ),
+          import(
+            './components/formulario-sesion/formulario-sesion.component'
+          ).then((m) => m.FormularioSesionComponent),
       },
       {
         path: 'students',

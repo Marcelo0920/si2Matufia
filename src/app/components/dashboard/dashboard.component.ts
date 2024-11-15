@@ -52,12 +52,14 @@ import { AuthService } from '../../services/auth.service';
           </a>
 
           <a
-            routerLink="/dashboard/products"
+            routerLink="/dashboard/formulario-sesion"
             routerLinkActive="active"
             class="menu-item"
           >
             <span class="menu-icon">📦</span>
-            <span class="menu-text" *ngIf="!sidebarCollapsed()">Productos</span>
+            <span class="menu-text" *ngIf="!sidebarCollapsed()"
+              >Sesión Médica</span
+            >
           </a>
 
           <a
@@ -381,7 +383,7 @@ export class DashboardComponent {
   getCurrentPageTitle(): string {
     const url = this.router.url;
     if (url.includes('clients')) return 'Gestión de Clientes';
-    if (url.includes('products')) return 'Gestión de Productos';
+    if (url.includes('formulario-sesion')) return 'Sesión Médica';
     if (url.includes('students')) return 'Gestión de Estudiantes';
     if (url.includes('profile')) return 'Perfil de Usuario';
     return 'Dashboard';
